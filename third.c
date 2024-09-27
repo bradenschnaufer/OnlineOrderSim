@@ -177,14 +177,19 @@ int main(void) {
   // Calculate the total cost based on quantities and prices of each clothing item
   totalCost = (shirtQuantity * SHIRT_PRICE) + (shoeQuantity * SHOE_PRICE) + (pantsQuantity * PANTS_PRICE);
 
-    // Display the formatted bill
-    printf("\nClothing Item\tQuantity\tPrice\t\tTotal\n");
+   printf("\nClothing Item\tQuantity\tPrice\t\tTotal\n");
     printf("-------------------------------------------------------\n");
     printf("Shirts\t\t%d\t\t$%.2f\t\t$%.2f\n", shirtQuantity, SHIRT_PRICE, shirtQuantity * SHIRT_PRICE);
     printf("Shoes\t\t%d\t\t$%.2f\t\t$%.2f\n", shoeQuantity, SHOE_PRICE, shoeQuantity * SHOE_PRICE);
     printf("Pants\t\t%d\t\t$%.2f\t\t$%.2f\n", pantsQuantity, PANTS_PRICE, pantsQuantity * PANTS_PRICE);
     printf("-------------------------------------------------------\n");
-    printf("Total Cost:\t\t\t\t\t$%.2f\n", totalCost);
+    printf("Subtotal:                                     $%.2f\n", subtotal);
+    printf("Shipping Destination: %s\n", country1);
+    printf("Shipping Method: %s\n", ship1);
+    printf("Shipping Cost:               $%.2f\n", shipcost);
+    printf("Tax (%.2f%%):                $%.2f\n", taxrate * 100, tax);
+    printf("-------------------------------------------------------\n");
+    printf("Total Cost:                  $%.2f\n", totalCost);
 
     return 0; // Indicate successful program execution//
     }
